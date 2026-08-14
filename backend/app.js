@@ -1,4 +1,4 @@
-import express from "express"; 
+import express from "express";   
 import { nanoid } from "nanoid"; 
 import dotenv from "dotenv";
 import connectDB from "./src/config/mongoos.config.js";
