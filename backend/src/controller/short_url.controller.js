@@ -11,7 +11,7 @@ export const createShortUrl = async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 };
-
+  
 export const redirectfromShortUrl = async (req, res) => {
   try {
     const { id } = req.params;
