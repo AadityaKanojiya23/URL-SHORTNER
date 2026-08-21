@@ -7,7 +7,7 @@ export const saveUrlService = async (shortUrl, longurl , userId) => {
         shortUrl: shortUrl,
     })
     if(userId){
-        newUrl.user = userId; // Fix 3: was `userId`, but schema field is `user`
+        newUrl.user = userId; 
     }
     return await newUrl.save();
 };
