@@ -1,5 +1,5 @@
 import { createShortUrlWithoutService } from "../services/short_url.service.js";
-import { getUrlService } from "../dao/short_url.js"; // Fix 1: was missing, caused ReferenceError
+import { getUrlService } from "../dao/short_url.js"; 
 
 export const createShortUrl = async (req, res) => {
   try {
@@ -7,7 +7,7 @@ export const createShortUrl = async (req, res) => {
     const shortUrl = await createShortUrlWithoutService(url);
     res.send(process.env.APP_URL + shortUrl);
   } catch (error) {
-    // Fix 2: unhandled promise rejection would crash the server
+   
     res.status(500).send("Internal Server Error");
   }
 };
