@@ -7,7 +7,7 @@ export const createShortUrl = async (req, res) => {
     const shortUrl = await createShortUrlWithoutService(url);
     res.send(process.env.APP_URL + shortUrl);
   } catch (error) {
-   
+     
     res.status(500).send("Internal Server Error");
   }
 };
